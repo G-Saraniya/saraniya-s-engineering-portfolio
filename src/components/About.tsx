@@ -32,10 +32,12 @@ const About = () => {
               <User className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-3">Who I Am</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              An ECE graduate passionate about IoT, embedded systems, and PCB design. 
-              I specialize in combining hardware and software to build innovative solutions.
-            </p>
+           <p className="text-muted-foreground leading-relaxed">
+  An ECE graduate passionate about software development and modern engineering technologies. 
+  I specialize in building real-world applications by integrating clean code, efficient systems, 
+  and problem-solving driven development.
+</p>
+
           </motion.div>
 
           <motion.div
@@ -49,10 +51,11 @@ const About = () => {
               <Target className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-3">What I Do</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Build IoT solutions using ESP32, design PCBs in KiCad, develop web applications 
-              with React, and create automation systems that bridge hardware and software.
-            </p>
+           <p className="text-muted-foreground leading-relaxed">
+  Create software-centric solutions spanning IoT, automation, and web development, integrating React 
+  applications with ESP32 systems and PCB designs built in KiCad.
+</p>
+
           </motion.div>
 
           <motion.div
