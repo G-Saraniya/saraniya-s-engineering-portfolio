@@ -81,7 +81,7 @@ const Hero = () => {
             className="text-xl md:text-2xl text-muted-foreground mb-6"
           >
             I'm passionate about{" "}
-            <span className="text-primary">Building IoT solutions</span>
+            <span className="text-primary">Building Websites and IoT solutions</span>
           </motion.p>
 
           <motion.p
@@ -90,9 +90,9 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed"
           >
-            I am an Electronics and Communication Engineering graduate passionate about 
-            building real-world solutions through IoT, software development, and PCB design. 
-            I enjoy combining hardware and software to create efficient, meaningful systems.
+            I am an Electronics and Communication Engineering graduate focused on software development and real-world problem solving. 
+            I specialize in building smart applications, integrating IoT and embedded systems with clean, 
+            scalable software to deliver efficient and meaningful solutions.
           </motion.p>
 
           <motion.div
