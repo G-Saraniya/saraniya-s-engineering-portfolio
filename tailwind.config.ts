@@ -102,10 +102,26 @@ export default {
         },
         "float": {
           "0%, 100%": {
-            transform: "translateY(0px)",
+            transform: "translateY(0px) rotate(0deg)",
           },
           "50%": {
-            transform: "translateY(-10px)",
+            transform: "translateY(-20px) rotate(5deg)",
+          },
+        },
+        "float-delayed": {
+          "0%, 100%": {
+            transform: "translateY(0px) rotate(0deg)",
+          },
+          "50%": {
+            transform: "translateY(-25px) rotate(-5deg)",
+          },
+        },
+        "orbit": {
+          "0%": {
+            transform: "rotate(0deg) translateX(150px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg) translateX(150px) rotate(-360deg)",
           },
         },
       },
@@ -114,7 +130,9 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.6s ease-out",
-        "float": "float 3s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
+        "float-delayed": "float-delayed 7s ease-in-out infinite",
+        "orbit": "orbit 20s linear infinite",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

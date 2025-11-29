@@ -2,20 +2,19 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 px-4 bg-accent text-accent-foreground">
+    <footer className="border-t border-border/50 py-8 px-4">
       <div className="container max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Saraniya G. All rights reserved.
+          <p className="text-muted-foreground text-sm">
+            © 2025 Saraniya G. All rights reserved.
           </p>
           
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <a
               href="https://github.com/g-saraniya"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-smooth"
-              aria-label="GitHub"
+              className="text-muted-foreground hover:text-primary transition-smooth"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -23,15 +22,13 @@ const Footer = () => {
               href="https://linkedin.com/in/g-saraniya"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-smooth"
-              aria-label="LinkedIn"
+              className="text-muted-foreground hover:text-primary transition-smooth"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="mailto:saraniyagopalakrishnan@gmail.com"
-              className="hover:text-primary transition-smooth"
-              aria-label="Email"
+              className="text-muted-foreground hover:text-primary transition-smooth"
             >
               <Mail className="w-5 h-5" />
             </a>
