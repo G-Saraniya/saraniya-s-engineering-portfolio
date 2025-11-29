@@ -104,10 +104,12 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="gradient-primary text-white border-0 hover:opacity-90 transition-smooth shadow-hover"
+              asChild
             >
-              <a href="/Saraniya G - Resume.pdf" download>
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
+              <a href="/resume.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
             </Button>
             <Button
               size="lg"
