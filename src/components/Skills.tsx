@@ -4,7 +4,7 @@ import { Code2, Brain } from "lucide-react";
 const technicalSkills = [
   "Java", "C", "Python", "Embedded C",
   "HTML", "CSS", "JavaScript", "React",
-  "SQL", "IoT", "KiCad", "ESP32"
+  "SQL", "IoT", "KiCad", "ESP32", "Flask", "GitHub"
 ];
 
 const softSkills = [
