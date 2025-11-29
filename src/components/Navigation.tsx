@@ -6,12 +6,9 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Contact", href: "#contact" },
+  { label: "Skills", href: "#skills" },
+  { label: "Connect", href: "#contact" },
 ];
 
 const Navigation = () => {
@@ -48,7 +45,7 @@ const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-card border-b border-border"
+          ? "bg-background/80 backdrop-blur-lg shadow-lg border-b border-border/50"
           : "bg-transparent"
       }`}
     >
@@ -60,20 +57,22 @@ const Navigation = () => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-2xl font-bold text-foreground"
+            className="text-2xl font-bold text-primary"
             whileHover={{ scale: 1.05 }}
           >
-            SG
+            {"{ SG }"}
           </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <Button
                 key={item.label}
                 variant="ghost"
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-smooth"
+                className={`text-foreground hover:text-primary transition-smooth ${
+                  index === navItems.length - 1 ? "text-primary" : ""
+                }`}
               >
                 {item.label}
               </Button>
@@ -84,7 +83,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X /> : <Menu />}
@@ -97,7 +96,7 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden pb-4"
+            className="md:hidden pb-4 bg-background/95 backdrop-blur-lg rounded-lg mt-2 border border-border/50"
           >
             {navItems.map((item) => (
               <Button
