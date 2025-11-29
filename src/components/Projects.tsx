@@ -2,27 +2,31 @@ import { motion } from "framer-motion";
 import { Droplet, Cpu, MessageSquare } from "lucide-react";
 
 const projects = [
+ {
+    title: "Chatbot Application",
+    description:
+      "Developed a Flask-powered chatbot application with automated response workflows, a clean responsive UI, and optional IoT integration to trigger safety alerts based on real-time sensor inputs.",
+    icon: MessageSquare,
+    tags: ["Flask", "JavaScript", "APIs", "Automation", "UI/UX"],
+    color: "text-purple-400"
+  }, 
   {
     title: "Smart Saline Bottle Monitoring System",
-    description: "IoT-enabled saline monitoring system using ESP32, load cell, and HX711 with automated solenoid valve control and real-time alerts via LCD and Blynk.",
+    description:
+      "Developed an IoT-based medical monitoring system using ESP32, load cell, and HX711 to track saline levels in real time, featuring automated solenoid valve control and instant alerts through LCD and Blynk Cloud for enhanced patient safety.",
     icon: Droplet,
-    tags: ["ESP32", "IoT", "C", "Blynk", "Hardware"],
+    tags: ["ESP32", "IoT", "Embedded C", "Blynk", "Sensors"],
     color: "text-blue-400"
   },
   {
     title: "Sensor Interface Board",
-    description: "Complete PCB design in KiCad from schematic to Gerber files, enabling multi-sensor integration with signal conditioning and ADC interfacing.",
+    description:
+      "Engineered a complete multi-sensor interface PCB in KiCad, including schematic design, footprint mapping, PCB routing, signal conditioning, and Gerber file generation, enabling seamless integration with embedded systems.",
     icon: Cpu,
-    tags: ["KiCad", "PCB Design", "Hardware", "Signal Processing"],
+    tags: ["KiCad", "PCB Design", "Hardware", "Signal Processing", "Electronics"],
     color: "text-green-400"
-  },
-  {
-    title: "Chatbot Application",
-    description: "Chatbot system integrated with IoT sensing to automate responses and trigger safety alerts based on real-time environmental data.",
-    icon: MessageSquare,
-    tags: ["JavaScript", "IoT", "ESP32", "Automation"],
-    color: "text-purple-400"
-  }
+  } 
+ 
 ];
 
 const Projects = () => {
