@@ -1,27 +1,35 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "PCB Design Intern",
-    company: "Altrazen Engineering",
-    period: "Internship",
+    title: "Smart India Hackathon Participant",
+    company: "KGiSL Institute of Technology",
+    period: "Competition",
     description: [
-      "Designed Sensor Interface Board using KiCad (schematic → PCB layout → Gerber)",
-      "Debugged hardware using multimeter and oscilloscope",
-      "Collaborated with engineers to improve design accuracy and manufacturability",
-      "Received Excellent rating in internship feedback"
+      "Participated in the 24-Hour Smart India Hackathon (Internal Round)",
+      "Worked on the problem statement: Himachal Pradesh Bus Tracking System",
+      "Gained experience in rapid prototyping and teamwork under time pressure"
     ]
   },
   {
-    title: "Placement Coordinator",
-    company: "KGiSL Institute of Technology",
-    period: "Student Role",
+    title: "Paper Presenter",
+    company: "SONA College, Salem",
+    period: "Presentation",
     description: [
-      "Coordinated placement activities and student engagement",
-      "Managed communications between students and recruiting companies"
+      "Presented a paper on Decentralized Banking Application",
+      "Demonstrated research and communication skills"
+    ]
+  },
+  {
+    title: "Workshop Participant",
+    company: "Karpagam College of Engineering",
+    period: "Workshop",
+    description: [
+      "Participated in the 3D Printing and Designing Workshop",
+      "Learned about additive manufacturing technologies and design principles"
     ]
   }
 ];
@@ -31,52 +39,72 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-20 px-4 bg-secondary/30">
+    <section id="experience" className="py-20 px-4">
       <div className="container max-w-4xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-            Experience
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Technical <span className="text-gradient">Exposure</span>
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+        </motion.div>
 
-          <div className="space-y-8">
+        <div className="relative">
+          {/* Vertical Line */}
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500/50 via-pink-500/50 to-transparent rounded-full" />
+
+          <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ delay: index * 0.2, duration: 0.6 }}
-                className="bg-card shadow-card rounded-2xl p-6 md:p-8 border border-border hover:shadow-hover transition-smooth"
+                className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Briefcase className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-card-foreground mb-1">
+                {/* Timeline Dot */}
+                <div className="absolute left-[-11px] md:left-1/2 md:transform md:-translate-x-1/2 top-0 w-6 h-6 rounded-full bg-background border-4 border-primary z-10 shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
+
+                <div className="flex-1 md:w-1/2 pl-8 md:pl-0">
+                  <div className={`glass-card p-6 rounded-2xl border-l-4 border-primary hover:translate-x-2 transition-transform duration-300 ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+                    }`}>
+                    <div className="flex items-center gap-3 mb-2 text-primary">
+                      <Briefcase className="w-5 h-5" />
+                      <span className="font-semibold tracking-wider text-sm uppercase">{exp.period}</span>
+                    </div>
+
+                    <h3 className="text-xl font-bold mb-1 text-foreground">
                       {exp.title}
                     </h3>
-                    <p className="text-primary font-medium mb-1">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
+
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+                      <MapPin className="w-4 h-4" />
+                      {exp.company}
+                    </div>
+
                     <ul className="space-y-2">
                       {exp.description.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-card-foreground">
-                          <span className="text-primary mt-1.5">•</span>
+                        <li key={i} className="flex items-start gap-2 text-muted-foreground/90 text-sm">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+
+                {/* Empty Space for Grid alignment */}
+                <div className="hidden md:block flex-1" />
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
