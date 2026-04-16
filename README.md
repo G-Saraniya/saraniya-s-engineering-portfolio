@@ -13,7 +13,7 @@ A modern, interactive portfolio website for Saraniya G, an Electronics & Communi
 
 - **Interactive UI**: Hover effects, smooth transitions, and dynamic content revealing.
 - **Smart Chatbot**: "Ask Me Anything" feature with auto-suggestions and dynamic responses based on portfolio data.
-- **Project Showcase**: Detailed project cards with expand/collapse functionality.
+- **Project Showcase**: Detailed project cards with expand/collapse functionality, including links to recent GitHub repositories (e.g., SmartDine AI, Student DBMS).
 - **Responsive Design**: Fully optimized for mobile, tablet, and desktop.
 - **Dark/Light Mode**: Theme toggle for user preference.
 
