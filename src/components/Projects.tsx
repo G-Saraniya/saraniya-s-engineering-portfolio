@@ -5,7 +5,23 @@ import { Button } from "./ui/button";
 
 const projects = [
   {
+    title: "Student DBMS",
+    link: "https://github.com/G-Saraniya/Student-DBMS",
+    period: "2024",
+    shortDesc: "A robust Java-based Database Management System for handling student records efficiently.",
+    description: "Developed a comprehensive Student Database Management System using Java and MySQL. The system provides an efficient way to manage student records, applying core principles of relational databases and database connectivity.",
+    contributions: [
+      "Designed the relational database schema in MySQL for structured data storage",
+      "Implemented Java Database Connectivity (JDBC) for seamless application-database integration",
+      "Developed comprehensive CRUD operations for student record management"
+    ],
+    tech: ["Java", "JDBC", "MySQL"],
+    icon: Code,
+    color: "text-orange-400"
+  },
+  {
     title: "Bus Reservation System",
+    link: "https://github.com/G-Saraniya/BusReservationSystem",
     period: "Sept 2025 – Oct 2025",
     shortDesc: "A console-based system managing bus reservations, passenger data, and scheduling with structured MVC architecture.",
     description: "Designed and implemented a console-based Bus Reservation System following structured MVC architecture principles. Focused on clean architectural practices and transactional integrity.",
@@ -82,11 +98,25 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
         <div className={`w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center ${project.color}`}>
           <project.icon className="w-6 h-6" />
         </div>
-        {project.period && (
-          <span className="text-xs font-mono bg-secondary px-2 py-1 rounded text-muted-foreground">
-            {project.period}
-          </span>
-        )}
+        <div className="flex items-center gap-3">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors z-10 p-1"
+              onClick={(e) => e.stopPropagation()}
+              title="View Repository"
+            >
+              <ExternalLink className="w-5 h-5" />
+            </a>
+          )}
+          {project.period && (
+            <span className="text-xs font-mono bg-secondary px-2 py-1 rounded text-muted-foreground">
+              {project.period}
+            </span>
+          )}
+        </div>
       </motion.div>
 
       <motion.h3 layout="position" className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
