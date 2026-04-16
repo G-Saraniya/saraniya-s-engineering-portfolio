@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Student DBMS",
     link: "https://github.com/G-Saraniya/Student-DBMS",
-    period: "2024",
+    period: "July 2025 – Aug 2025",
     shortDesc: "A robust Java-based Database Management System for handling student records efficiently.",
     description: "Developed a comprehensive Student Database Management System using Java and MySQL. The system provides an efficient way to manage student records, applying core principles of relational databases and database connectivity.",
     contributions: [
