@@ -53,6 +53,7 @@ const projects = [
   },
   {
     title: "Restaurant Recommendation Interface",
+    link: "https://github.com/G-Saraniya/smartdine-ai",
     period: "Nov 2025 – Dec 2025",
     shortDesc: "Responsive front-end web interface for dining options with intuitive UI and clean design.",
     description: "Developed a responsive front-end web interface focused on clean design and structured user experience, enhancing proficiency in UI structuring.",
